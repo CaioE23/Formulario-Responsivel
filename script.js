@@ -147,7 +147,7 @@ function emailIsValid(value) {
         validator.errorMessage = "O e-mail é obrigatório!";
         return validator;
     }
-    const regex = new RegExp(" /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i ")
+    const regex = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")
     if (!regex.test(value)) {
         validator.isValid = false;
         validator.errorMessage = "O e-mail precisa ser válido!";
